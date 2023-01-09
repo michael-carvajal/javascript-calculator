@@ -49,6 +49,10 @@ body {
 .numbers div:active {
     transform: scale(0.95);
 }
+.clear{
+    background-color: none;
+    font-size: 50px;
+}
 
 .operators {
     display: flex;
