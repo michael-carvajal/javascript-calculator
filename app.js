@@ -89,6 +89,9 @@ window.onload = function () {
         else if (event.key === "c") {
             clear.click();
         }
+        else if (event.key === "Backspace") {
+            screen.innerHTML = screen.innerHTML.slice(0, -1);
+        }
         // ...and so on for the other number keys
     });
 
@@ -96,6 +99,8 @@ window.onload = function () {
     clear.onclick = function () {
         screen.innerHTML = '';
     }
+
+
 
 
 
