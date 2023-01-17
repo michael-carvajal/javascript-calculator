@@ -21,11 +21,16 @@ body {
     padding: 20px;
 }
 
+.history{
+    font-size: 18px;
+    color: rgb(92, 66, 66);
+}
+
 .screen {
     height: 50px;
     border: 1px grey solid;
     padding: 8px;
-    margin-top: 80px;
+    margin-top: 10px;
     overflow: hidden;
 }
 
