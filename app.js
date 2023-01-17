@@ -16,6 +16,8 @@ window.onload = function () {
     const mult = document.querySelector('.mult')
     const equal = document.querySelector('.equal')
     const clear = document.querySelector('.clear')
+    const history = document.querySelector('.history')
+    const clear_history = document.querySelector('.clear_history')
 
     const numbers = [zero, one, two, three, four, five, six, seven, eight, nine]
     const operators = [plus, minus, equal, mult, divide]
@@ -37,8 +39,21 @@ window.onload = function () {
     });
 
     equal.onclick = function () {
-        let value = eval(screen.innerHTML);
+        let equation = screen.innerHTML
+        let value = eval(equation);
         screen.innerHTML = value;
+        let childDiv = document.createElement("div");
+        childDiv.innerHTML = equation + " = " + value;
+        history.appendChild(childDiv);
+    }
+
+    clear_history.onclick = function () {
+        let histChild = history.lastElementChild;
+        while (histChild) {
+            history.removeChild(histChild);
+            histChild = history.lastElementChild;
+        }
+
     }
 
     document.addEventListener("keydown", function (event) {
@@ -99,6 +114,7 @@ window.onload = function () {
     clear.onclick = function () {
         screen.innerHTML = '';
     }
+
 
 
 
